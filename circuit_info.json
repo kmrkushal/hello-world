@@ -1,0 +1,53 @@
+{
+  "inputs": [
+    "A",
+    "Cin",
+    "B"
+  ],
+  "outputs": [
+    "Cout",
+    "Sum"
+  ],
+  "gates": {
+    "X1": {
+      "gate_type": "XOR",
+      "gate_name": "X1",
+      "connections": [
+        "A",
+        "B"
+      ]
+    },
+    "A1": {
+      "gate_type": "AND",
+      "gate_name": "A1",
+      "connections": [
+        "A",
+        "B"
+      ]
+    },
+    "Sum": {
+      "gate_type": "XOR",
+      "gate_name": "Sum",
+      "connections": [
+        "X1",
+        "Cin"
+      ]
+    },
+    "A2": {
+      "gate_type": "AND",
+      "gate_name": "A2",
+      "connections": [
+        "X1",
+        "Cin"
+      ]
+    },
+    "Cout": {
+      "gate_type": "OR",
+      "gate_name": "Cout",
+      "connections": [
+        "A1",
+        "A2"
+      ]
+    }
+  }
+}

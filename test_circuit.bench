@@ -1,0 +1,14 @@
+# Full-Adder in BENCH Format
+
+INPUT(A)
+INPUT(B)
+INPUT(Cin)
+
+OUTPUT(Sum)
+OUTPUT(Cout)
+
+XOR(X1, A, B)
+AND(A1, A, B)
+XOR(Sum, X1, Cin)
+AND(A2, X1, Cin)
+OR(Cout, A1, A2)
